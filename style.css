@@ -218,7 +218,7 @@ span{
         content: "Data Scientist";
     }
     21%, 40% {
-        content: "Software Developer";
+        content: "Data Analysis";
     }
     41%, 60% {
         content: "App Developer";
@@ -227,7 +227,7 @@ span{
         content: "Web Developer";
     }
     81%, 100% {
-        content: "Ethical Hacker";
+        content: "Google Play Console Manager";
     }
 }
 @keyframes typing{
