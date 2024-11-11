@@ -218,16 +218,16 @@ span{
         content: "Data Scientist";
     }
     21%, 40% {
-        content: "Data Analysis";
+        content: "Data Analyst";
     }
     41%, 60% {
-        content: "App Developer";
+        content: "Apps Hoster";
     }
     61%, 80% {
-        content: "Web Developer";
+        content: "Wix Web Developer";
     }
     81%, 100% {
-        content: "Google Play Manager";
+        content: "Play Store Hoster";
     }
 }
 @keyframes typing{
