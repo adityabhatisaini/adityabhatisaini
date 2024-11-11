@@ -191,7 +191,7 @@ span{
 }
 
 .text-animation span::before {
-    content: "Web Developer";
+    content: "Wix Web Developer";
     color: var(--main-color);
     animation: words 20s infinite;
 }
