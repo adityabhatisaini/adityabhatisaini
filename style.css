@@ -217,8 +217,8 @@ span{
     0%, 20% {
         content: "Data Analyst";
     }
-    /*
-    21%, 40% {
+    
+    21%, 40% /*{
         content: "Data Analyst";
     }*/
     41%, 60% {
@@ -227,10 +227,9 @@ span{
     61%, 80% {
         content: "Wix Web Developer";
     }
-    /*
     81%, 100% {
         content: "Play Store Hoster";
-    }*/
+    }
 }
 @keyframes typing{
     10%,
