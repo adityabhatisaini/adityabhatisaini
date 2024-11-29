@@ -218,9 +218,9 @@ span{
         content: "Data Analyst";
     }
     
-    21%, 40% /*{
-        content: "Data Analyst";
-    }*/
+    21%, 40% {
+        content: "Cloud Data Manager";
+    }
     41%, 60% {
         content: "Apps Hoster";
     }
