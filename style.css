@@ -219,16 +219,16 @@ span{
     }
     
     21%, 40% {
-        content: "Cloud Data Manager";
+        content: "App Hoster";
     }
     41%, 60% {
-        content: "Apps Hoster";
+        content: "Web App Developer";
     }
     61%, 80% {
         content: "Wix Web Developer";
     }
     81%, 100% {
-        content: "Play Store Hoster";
+        content: "Play Store Listing";
     }
 }
 @keyframes typing{
