@@ -88,23 +88,24 @@
 
     .skills-box {
         text-align: center;
-        font-weight: bold;
         font-size: 18px;
-        color: #333;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skills-box h3 {
-        margin: 0;
+        color: #000; /* Text color */
+        background-color: #00F6FF; /* Neon blue background */
+        padding: 15px;
+        border-radius: 50px; /* Rounded corners */
+        box-shadow: 0 0 10px #00F6FF, 0 0 20px #00F6FF; /* Neon glow */
         font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
     }
 
     .skills-box:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px #00F6FF, 0 0 30px #00F6FF; /* Glow intensifies */
+    }
+
+    .skills-box h3 {
+        margin: 0;
     }
 
     .heading {
@@ -121,14 +122,15 @@
             gap: 15px;
         }
     }
-    
+
     @media (max-width: 480px) {
         .skills-box {
-            padding: 15px;
+            padding: 12px;
             font-size: 16px;
         }
     }
 </style>
+
 
     <!-- Education Section -->
     <section class="education" id="education">
