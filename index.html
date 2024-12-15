@@ -25,12 +25,12 @@
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="#services">Skills</a>
-            <a href="#contact">Contact</a>
             <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, It's <span>Aditya</span></h1>
@@ -51,34 +51,53 @@
         <div class="home-img">
             <img src="IMG-20240929-WA0009.jpg" alt="Aditya Bhati">
         </div>
+    </section>
 
-<section class="skills" id="skills">
-    <h2 class="heading">Skills</h2>
-    <div class="skills-container">
-        <div class="skills-box">
-            <h3>MS Excel</h3>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Skills</h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>MS Excel</h3>
+            </div>
+            <div class="skills-box">
+                <h3>Power BI</h3>
+            </div>
         </div>
-        <div class="skills-box">
-            <h3>Power BI</h3>
-        </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    .skills-container {
-        display: flex; /* Arrange boxes in a row */
-        justify-content: space-around; /* Equal spacing between items */
-        align-items: center; /* Align items vertically */
-    }
+    <style>
+        /* Skills Section Styling */
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
 
-    .skills-box h3 {
-        font-size: 17px; /* Increase font size */
-        margin: 0; /* Remove extra spacing */
-    }
-</style>
+        .skills-box h3 {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0;
+        }
 
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    
+        @media (max-width: 768px) {
+            .skills-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+
+    <!-- Education Section -->
     <section class="education" id="education">
         <h2 class="heading">Education</h2>
         <div class="timeline-items">
@@ -115,6 +134,10 @@
                 </div>
             </div>
         </div>
+    </section>
+</body>
+</html>
+
     </section>
 
     <section class="services" id="services">
