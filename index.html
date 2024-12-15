@@ -57,80 +57,55 @@
 <section class="skills" id="skills">
     <h2 class="heading">Skills</h2>
     <div class="skills-container">
-        <div class="skills-box">
-            <h3>MS Excel</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Power BI</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Microsoft Azure</h3>
-        </div>
-        <div class="skills-box">
-            <h3>SQL Server</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Microsoft Office Suite</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Python</h3>
-        </div>
-        <div class="skills-box">
-            <h3>R Programming</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Tableau</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Data Analysis</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Power Query</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Data Factory (Azure)</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Apache Spark</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Hadoop</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Data Visualization</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Regression Analysis</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Clustering Analysis</h3>
-        </div>
-        <div class="skills-box">
-            <h3>Business Intelligence (BI)</h3>
-        </div>
+        <div class="skills-box"><h3>MS Excel</h3></div>
+        <div class="skills-box"><h3>Power BI</h3></div>
+        <div class="skills-box"><h3>Microsoft Azure</h3></div>
+        <div class="skills-box"><h3>SQL Server</h3></div>
+        <div class="skills-box"><h3>Microsoft Office Suite</h3></div>
+        <div class="skills-box"><h3>Python</h3></div>
+        <div class="skills-box"><h3>R Programming</h3></div>
+        <div class="skills-box"><h3>Tableau</h3></div>
+        <div class="skills-box"><h3>Data Analysis</h3></div>
+        <div class="skills-box"><h3>Power Query</h3></div>
+        <div class="skills-box"><h3>Data Factory (Azure)</h3></div>
+        <div class="skills-box"><h3>Apache Spark</h3></div>
+        <div class="skills-box"><h3>Hadoop</h3></div>
+        <div class="skills-box"><h3>Data Visualization</h3></div>
+        <div class="skills-box"><h3>Regression Analysis</h3></div>
+        <div class="skills-box"><h3>Clustering Analysis</h3></div>
+        <div class="skills-box"><h3>Business Intelligence (BI)</h3></div>
     </div>
 </section>
 
 <style>
     /* Skills Section Styling */
     .skills-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid layout */
+        gap: 20px;
+        padding: 20px;
     }
 
     .skills-box {
-        flex: 1; /* Allow items to adjust based on available space */
-        text-align: center; /* Center align text in each box */
-        max-width: 150px; /* Prevent items from being too wide */
+        background-color: #f5f5f5;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 150px;
+        margin: auto;
     }
 
     .skills-box h3 {
-        font-size: 17px;
+        font-size: 18px;
         font-weight: bold;
+        color: #333;
         margin: 0;
+    }
+
+    .skills-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
     .heading {
@@ -138,31 +113,36 @@
         font-weight: bold;
         text-align: center;
         margin-bottom: 20px;
+        color: #222;
     }
 
+    /* Adjustments for Tablets and Smaller Screens */
     @media (max-width: 768px) {
         .skills-container {
-            gap: 10px; /* Add spacing between items */
-        }
-
-        .skills-box h3 {
-            font-size: 15px; /* Reduce font size slightly for mobile */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .skills-container {
-            flex-direction: row; /* Force horizontal layout on small screens */
-            gap: 5px; /* Minimal gap */
+            gap: 15px;
         }
 
         .skills-box {
-            max-width: 100px; /* Adjust box size further for smaller screens */
+            padding: 15px;
+        }
+
+        .skills-box h3 {
+            font-size: 16px;
+        }
+    }
+
+    /* Adjustments for Mobile Views */
+    @media (max-width: 480px) {
+        .skills-container {
+            grid-template-columns: 1fr; /* Single-column grid for better wrapping */
+            padding: 10px;
+        }
+
+        .skills-box {
+            max-width: 100%;
         }
     }
 </style>
-
-
 
 
     <!-- Education Section -->
