@@ -93,7 +93,7 @@
         background-color: #00F6FF; /* Neon blue background */
         padding: 15px;
         border-radius: 50px; /* Rounded corners */
-        box-shadow: 0 0 10px #00F6FF, 0 0 20px #00F6FF; /* Neon glow */
+        border: 2px solid #00F6FF; /* Solid neon border without blur */
         font-weight: bold;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
@@ -101,7 +101,7 @@
 
     .skills-box:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 20px #00F6FF, 0 0 30px #00F6FF; /* Glow intensifies */
+        box-shadow: 0 0 0 #00F6FF; /* No blur effect on hover */
     }
 
     .skills-box h3 {
@@ -109,7 +109,7 @@
     }
 
     .heading {
-        font-size: 24px;
+        font-size: 36px;
         text-align: center;
         font-weight: bold;
         margin-bottom: 20px;
