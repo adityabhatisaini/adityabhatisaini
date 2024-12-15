@@ -66,36 +66,57 @@
         </div>
     </section>
 
-    <style>
-        /* Skills Section Styling */
+<style>
+    /* Skills Section Styling */
+    .skills-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        margin: 20px 0;
+    }
+
+    .skills-box {
+        flex: 1; /* Allow items to adjust based on available space */
+        text-align: center; /* Center align text in each box */
+        max-width: 150px; /* Prevent items from being too wide */
+    }
+
+    .skills-box h3 {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
         .skills-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 0;
+            gap: 10px; /* Add spacing between items */
         }
 
         .skills-box h3 {
-            font-size: 17px;
-            font-weight: bold;
-            margin: 0;
+            font-size: 15px; /* Reduce font size slightly for mobile */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills-container {
+            flex-direction: row; /* Force horizontal layout on small screens */
+            gap: 5px; /* Minimal gap */
         }
 
-        .heading {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
+        .skills-box {
+            max-width: 100px; /* Adjust box size further for smaller screens */
         }
+    }
+</style>
 
-        @media (max-width: 768px) {
-            .skills-container {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-        }
-    </style>
 
     <!-- Education Section -->
     <section class="education" id="education">
