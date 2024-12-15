@@ -81,23 +81,23 @@
     /* Skills Section Styling */
     .skills-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid layout */
+        grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
         gap: 20px;
         padding: 20px;
     }
 
     .skills-box {
         background-color: #f5f5f5;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
         border-radius: 10px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        max-width: 150px;
+        max-width: 200px;
         margin: auto;
     }
 
     .skills-box h3 {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         color: #333;
         margin: 0;
@@ -116,33 +116,25 @@
         color: #222;
     }
 
-    /* Adjustments for Tablets and Smaller Screens */
+    /* Adjustments for Smaller Screens */
     @media (max-width: 768px) {
         .skills-container {
+            grid-template-columns: 1fr; /* Stack items in a single column */
             gap: 15px;
         }
 
         .skills-box {
-            padding: 15px;
-        }
-
-        .skills-box h3 {
-            font-size: 16px;
+            padding: 20px;
         }
     }
 
-    /* Adjustments for Mobile Views */
     @media (max-width: 480px) {
-        .skills-container {
-            grid-template-columns: 1fr; /* Single-column grid for better wrapping */
-            padding: 10px;
-        }
-
         .skills-box {
             max-width: 100%;
         }
     }
 </style>
+
 
 
     <!-- Education Section -->
