@@ -215,20 +215,20 @@ span{
 
 @keyframes words {
     0%, 20% {
-        content: "Data Analyst";
+        content: "Big Data Analyst";
     }
     
     21%, 40% {
-        content: "App Hoster";
+        content: "Wix Web Developer";
     }
     41%, 60% {
         content: "Web App Developer";
     }
     61%, 80% {
-        content: "Wix Web Developer";
+        content: "Play Store Listing";
     }
     81%, 100% {
-        content: "Play Store Listing";
+        content: "Apps Deployment";
     }
 }
 @keyframes typing{
