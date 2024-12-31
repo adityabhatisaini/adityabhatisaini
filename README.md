@@ -10,6 +10,13 @@
 - 😄 Pronouns: **He/Him**  
 - ⚡ Fun fact: I love watching sci-fi movies and exploring new technology gadgets.
 
+# My Favourite Tool
+
+## VS Code Forever ❤️
+
+VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing text. Its versatility, lightweight nature, and extensive plugin ecosystem make it an indispensable companion for developers. Whether it's writing scripts, building applications, or exploring new technologies, VS Code is always up to the task. 🚀
+
+
 
 
 ## Disclaimer
@@ -18,5 +25,5 @@
 
 The code and content of this repository are protected under copyright law. Any unauthorized use, reproduction, or distribution is prohibited. Legal action will be taken against violators.
 
-For permissions or inquiries, contact: [adityabhatisaini@gmail.com].
+For permissions or inquiries, Email: adityabhatisaini@gmail.com
 
