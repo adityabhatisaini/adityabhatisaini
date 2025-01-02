@@ -1,6 +1,6 @@
 # Copyright Notice
 
-© 2024 Aditya Bhati. All rights reserved.
+© 2025 Aditya Bhati. All rights reserved.
 
 This website (adityabhati.online) and all its associated content, design, and code are protected by copyright law. Unauthorized use, reproduction, or distribution of any portion of this website is strictly prohibited.
 
