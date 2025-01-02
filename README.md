@@ -21,7 +21,7 @@ VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing
 
 ## Disclaimer
 
-© 2024 Aditya Bhati. All rights reserved.
+© 2025 Aditya Bhati. All rights reserved.
 
 The code and content of this repository are protected under copyright law. Any unauthorized use, reproduction, or distribution is prohibited. Legal action will be taken against violators.
 
