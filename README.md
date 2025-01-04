@@ -37,7 +37,9 @@ Here is my certification and badge for **Google Play Console Management**:
 
 [View Full Certificate](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/113713894)
 
+## My Google Play Store Developer Page
 
+[![Play Store](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/dev?id=8574852185894925404)
 
 
 ## Disclaimer
