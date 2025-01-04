@@ -17,7 +17,6 @@
 VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing text. Its versatility, lightweight nature, and extensive plugin ecosystem make it an indispensable companion for developers. Whether it's writing scripts, building applications, or exploring new technologies, VS Code is always up to the task. 🚀
 
 
-## Here are some stats about my contributions:👋
 
 
 
