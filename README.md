@@ -17,7 +17,7 @@
 VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing text. Its versatility, lightweight nature, and extensive plugin ecosystem make it an indispensable companion for developers. Whether it's writing scripts, building applications, or exploring new technologies, VS Code is always up to the task. 🚀
 
 
-# Here are some stats about my contributions:👋
+## Here are some stats about my contributions:👋
 
 
 
@@ -27,6 +27,16 @@ VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=adityabhatisaini&theme=radical)
 
+
+
+## Certifications 🎓
+
+### [Google Play Store Apps Listing Certificate ](https://www.credential.net/113713894)
+Here is my certification badge and certificate for **Google Play Console Management**:
+
+![Certification Badge](https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/113713894)
+
+[View Full Certificate](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/113713894)
 
 
 
