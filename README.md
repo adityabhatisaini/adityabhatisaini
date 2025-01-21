@@ -18,13 +18,11 @@ VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing
 
 
 
+![My GitHub Stats](https://github-readme-stats.vercel.app/api?username=adityabhatisaini&show_icons=true&theme=radical&cache_seconds=1800)
 
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adityabhatisaini&layout=compact&theme=radical&cache_seconds=1800)
 
-![My GitHub Stats](https://github-readme-stats.vercel.app/api?username=adityabhatisaini&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adityabhatisaini&layout=compact&theme=radical)
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=adityabhatisaini&theme=radical)
+![GitHub Streak](https://streak-stats.demolab.com/?user=adityabhatisaini&theme=radical&cache_seconds=1800)
 
 
 
