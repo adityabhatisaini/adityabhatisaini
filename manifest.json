@@ -1,30 +1,22 @@
 {
   "name": "Aditya Bhati Official",
   "short_name": "Aditya",
-  "description": "The official website of Aditya Bhati, showcasing skills, projects, and achievements.",
-  "start_url": "https://adityabhati.online",
+  "description": "The official website of Aditya Bhati.",
+  "start_url": "https://adityabhati.online/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/images/icon-192x192.png",
+      "src": "https://adityabhati.online/reallogo.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "/images/icon-512x512.png",
+      "src": "https://adityabhati.online/reallogo.jpg",
       "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
-  ],
-  "categories": ["portfolio", "technology", "personal"],
-  "lang": "en"
+  ]
 }
