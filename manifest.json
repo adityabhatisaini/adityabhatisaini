@@ -1,8 +1,11 @@
 {
-  "name": "Aditya Bhati",
-  "short_name": "ABS",
-  "start_url": "https://adityabhatisaini.github.io/adityabhatisaini/",
+  "name": "Aditya Bhati Official",
+  "short_name": "Aditya",
+  "description": "The official website of Aditya Bhati, showcasing skills, projects, and achievements.",
+  "start_url": "https://adityabhati.online",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
@@ -15,6 +18,13 @@
       "src": "/images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
     }
-  ]
+  ],
+  "categories": ["portfolio", "technology", "personal"],
+  "lang": "en"
 }
