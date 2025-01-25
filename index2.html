@@ -1,92 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="manifest" href="/manifest.json">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://adityabhati.online",
+      "logo": "favicon.ico"
+    }
+    </script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hi, this is rishabh</title>
-    <meta name="description" content="Official portfolio of Rishabh Karnawat. Explore my work, projects, and professional experience in software development and technology.">
-    
-    <!-- Keywords meta tag (while not as important for modern SEO, still good to include) -->
-    <meta name="keywords" content="Rishabh Karnawat, Rishabh, Rishabhk, software developer, portfolio">
-    
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="Rishabh Karnawat - Portfolio">
-    <meta property="og:description" content="Professional portfolio and work showcase of Rishabh Karnawat">
-    <meta property="og:type" content="website">
-    
-    <!-- Ensure search engines index your page -->
-    <meta name="robots" content="index, follow">
-    
-    <!-- Author tag -->
-    <meta name="author" content="Rishabh Karnawat">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpeg" href="profile picture.jpeg">
-    <link rel="shortcut icon" type="image/jpeg" href="profile picture.jpeg">
+    <title>Aditya Bhati</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">RK</a>
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <div class="nav-links">
-            <a href="index.html">home</a>
-            <a href="essays.html">essays</a>
-            <a href="experience.html">work experience</a>
-            <a href="bookshelf.html">bookshelf</a>
-            <a href="goals.html">goals</a>
+    <header class="header">
+        <a href="#home" class="logo">Aditya<span> Bhati</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <!--<a href="#experience">Experience</a>-->
+            <a href="#skills">Skills</a>
+            <a href="index2.html">Contact</a>
+        </nav>
+    </header>
+
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Aditya</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>A versatile and enthusiastic Analyst with a solid foundation in statistics, data analysis, and data science, 
+                dedicated to uncovering actionable insights and driving data-informed decision-making.
+                Committed to delivering solutions that create measurable business value and enable organizational success.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aditya-bhati-6a3513277/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/adityabhatisaini"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/invites/contact/?igsh=jcf6ug61n2ue&utm_content=n1755qt"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://github.com/adityabhatisaini/adityabhatisaini/raw/1f28912710bec5f8798366c69f6290db9406bcd8/Aditya_Bhati_Resume.pdf
+" class="btn">Resume</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
         </div>
-        
+        <div class="home-img">
+            <img src="IMG-20240929-WA0009.jpg" alt="Aditya Bhati">
+        </div>
+    </section>
 
-    </nav>
-    <div class="main-content">
-        <img src="profile picture.jpeg" alt="Rishabh's Profile" class="profile-image">
-        <h1 class="title">hi, this is <span class="highlight-words">rishabh</span>.</h1>
-        <p class="bio">i am currently a grade 12 student enrolled in the international baccalaureate diploma programme, set to graduate in 2025. i am a student, entrepreneur, and a self-taught full stack developer building and shipping products that sell.</p>
-        <p class="bio">i love to collaborate with like-minded individuals and build products that solve real-world problems. if you are interested in working together, feel free to reach out via <a href="mailto:rishabh.karanawat.2114@gmail.com" class="bio-link">gmail</a> or schedule a <a href="https://cal.com/rishabh-karnawat-vbrvap" class="bio-link">call</a>.</p>
-        <p class="bio">i am very curious about ai, startups, saas, cryptocurency, philosophy, space-tech, green energy and neuroscience. to work with me on the same and know me more, you can connect with me on <a href="https://www.linkedin.com/in/rishabh-karnawat-a1ab28319" class="bio-link">linkedin</a>.</p>
-        <p class="bio">i believe you cannot build great things without being surrounded by great people, thats why i started writing on <a href="https://x.com/Rishabhbuilds" class="bio-link">twitter(x)</a>.</p>
 
-        
+<section class="skills" id="skills">
+    <h2 class="heading">Well Skills</h2>
+    <div class="skills-container">
+        <div class="skills-box"><h3>Wix Web Development</h3></div>
+        <div class="skills-box"><h3>App Sheet Development</h3></div>
+        <div class="skills-box"><a href="https://play.google.com/store/apps/dev?id=8574852185894925404">Google Play Console Management</a></div>
+        <div class="skills-box"><h3></h3>Microsoft SQL Server</h3></div>
+        <div class="skills-box"><h3>Microsoft Office 365</h3></div>
+        <div class="skills-box"><h3>Python</h3></div>
+        <div class="skills-box"><h3>App Growth Marketing</h3></div>
+        <div class="skills-box"><h3>Microsoft Power BI</h3></div>
+        <div class="skills-box"><h3>Business Analysis</h3></div>
+        <div class="skills-box"><h3>Power Query</h3></div>
+        <div class="skills-box"><h3>Advanced Live Streaming(Multi-Screen)</h3></div>
+        <div class="skills-box"><h3>Apache Hadoop</h3></div>
+        <div class="skills-box"><h3>Online Advertisement</h3></div>
+        <div class="skills-box"><h3>Google Firebase</h3></div>
+        <div class="skills-box"><h3>Google Ads,AdMob,Adsense</h3></div>
+        <div class="skills-box"><h3>Cloud Computing</h3></div>
+        <div class="skills-box"><h3>Web Scrapping</h3></div>
+        <div class="skills-box"><h3>GitHub(Enterprise)</h3></div>
+        <div class="skills-box"><h3>Business Intelligence (BI)</h3></div>
+        <div class="skills-box"><h3>VS Code(Git to GitHub)</h3></div>
+        <div class="skills-box"><h3>Wordpress Web Development</h3></div>
+        <div class="skills-box"><h3>Google Business Profile Management</h3></div>
     </div>
-    <div class="footer">
-        <a href="index.html" class="footer-logo">RK</a>
-        <p class="copyright">Copyright © 2024 Rishabh Karnawat. All Rights Reserved.</p>
-    </div>
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+</section>
+
+<style>
+    /* Skills Section Styling */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .skills-box {
+        text-align: center;
+        font-size: 18px;
+        color: #000; /* Text color */
+        background-color: #00F6FF; /* Neon blue background */
+        padding: 15px;
+        border-radius: 50px; /* Rounded corners */
+        border: 2px solid #00F6FF; /* Solid neon border without blur */
+        font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .skills-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 #00F6FF; /* No blur effect on hover */
+    }
+
+    .skills-box h3 {
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 59px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
     
-        // Hamburger click handler
-        hamburger.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent click from immediately bubbling to document
-            hamburger.classList.toggle("active");
-            navLinks.classList.toggle("active");
-        });
+    @media (max-width: 768px) {
+        .skills-container {
+            grid-template-columns: 1fr; /* Stack items vertically */
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills-box {
+            padding: 12px;
+            font-size: 16px;
+        }
+    }
+</style>
+
+
     
-        // Close menu when clicking a link
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                hamburger.classList.remove("active");
-                navLinks.classList.remove("active");
-            });
-        });
-    
-        // Close menu when clicking anywhere else on the document
-        document.addEventListener("click", (e) => {
-            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-                hamburger.classList.remove("active");
-                navLinks.classList.remove("active");
-            }
-        });
-    
-        // Prevent clicks inside the menu from closing it
-        navLinks.addEventListener("click", (e) => {
-            e.stopPropagation();
-        });
-    </script>
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>High School</h3>
+                    <p>Completed high school with a strong foundation in science and mathematics, actively participating in various academic and extracurricular activities.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Intermediate</h3>
+                    <p>Successfully completed intermediate education with Physics, Chemistry, and Mathematics.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h3>Graduation</h3>
+                    <p>Graduated with a B.Sc. in Statistics! 🎓 Proud of this milestone and ready for the next adventure! 💪✨</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 To 2026</div>
+                <div class="timeline-content">
+                    <h3>Postgraduation</h3>
+                    <p>Currently pursuing a PGDM in Big Data Analytics at AIDTM. Developing expertise in analyzing large datasets and deriving actionable insights for business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">I Can Do</h2>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Data Analysis</h4>
+                    <p>Providing comprehensive data analysis services, including data cleaning, data visualization, and interpretation. We help you make data-driven decisions by uncovering patterns, trends, and insights that are crucial for your business growth.</p>
+                </div>
+            </div>
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Web Development</h4>
+                    <p>Designing responsive and user-friendly websites with the latest technologies on Wix and WordPress. We create visually stunning, high-performing, and SEO-optimized sites.</p>
+                </div>
+            </div>
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Apps Hosting</h4>
+                    <p>Specializing in hosting and managing apps on the Google Play Store and Indus App Store, ensuring they are properly published and maintained for maximum visibility.</p>
+                </div>
+            </div>
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Beta Testing</h4>
+                    <p>I provide beta testing services for mobile apps on the Google Play Store, analyzing performance, usability, and compatibility across devices. Using analytics, key performance indicators (KPIs), and customer feedback, I deliver insights and UI design recommendations to enhance app quality and user experience.</p>
+                </div>
+            </div>
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Artificial Intelligence</h4>
+                    <p>I develop AI chatbots using OpenAI, focusing on creating intelligent, responsive, and user-friendly conversational experiences. By leveraging advanced NLP models and customer feedback, I optimize chatbot performance, enhance user engagement, and provide insightful recommendations for improved interaction and satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="13668d68-5cc9-4495-aff6-fd7b95d0f12f">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="tel" name="phone_number" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/aditya-bhati-6a3513277"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/adityabhatisaini"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/invites/contact/?igsh=jcf6ug61n2ue&utm_content=n1755qt"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="https://play.google.com/store/apps/dev?id=8574852185894925404">Google Play Developer Page</a></li>
+            <li><a href="https://www.youtube.com/@interstellere">🌀 YouTube</a></li>
+        </ul>
+        <p class="copyright">@ Aditya Bhati | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
