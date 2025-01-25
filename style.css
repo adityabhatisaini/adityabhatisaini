@@ -733,3 +733,28 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
+
+/* Style for the "Add to Home Screen" button */
+#add-to-home-btn {
+    background: transparent; /* Transparent background */
+    color: #00ffff; /* Teal color for the text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-family: inherit; /* Inherit font style from the parent element */
+    font-size: inherit; /* Inherit font size */
+    padding: 5px 10px; /* Add some padding for better spacing */
+    text-decoration: none; /* No underline by default */
+  }
+  
+  /* Hover effect to add underline */
+  #add-to-home-btn:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #00ffff; /* Keep the same text color */
+  }
+  
+  /* Optional: Focus effect for accessibility */
+  #add-to-home-btn:focus {
+    outline: none; /* Remove default focus outline */
+    text-decoration: underline; /* Add underline on focus */
+  }
+  
