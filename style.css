@@ -742,7 +742,7 @@ span{
     cursor: pointer; /* Pointer cursor for interaction */
     font-family: inherit; /* Inherit font style from the parent element */
     font-size: inherit; /* Inherit font size */
-    padding: 5px 10px; /* Add some padding for better spacing */
+    padding: 5px 10px; /* Add padding for better spacing */
     text-decoration: none; /* No underline by default */
   }
   
@@ -757,4 +757,11 @@ span{
     outline: none; /* Remove default focus outline */
     text-decoration: underline; /* Add underline on focus */
   }
+  
+  /* Add some spacing or alignment for the button */
+  #add-to-home-btn-wrapper {
+    text-align: center; /* Center align the button */
+    padding: 20px; /* Add some spacing around the button */
+  }
+  
   
