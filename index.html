@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js').then(() => {
+            console.log('Service Worker registered');
+          });
+        }
+    </script>
+
+    <script>
+    let deferredPrompt;
+  
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the default prompt
+      e.preventDefault();
+      deferredPrompt = e;
+  
+      // Show your custom button or prompt here
+      const addToHomeBtn = document.getElementById('add-to-home-btn');
+      addToHomeBtn.style.display = 'block';
+  
+      addToHomeBtn.addEventListener('click', () => {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+    });
+      </script>
+  
+      
+
     <link rel="manifest" href="/manifest.json">
 
     <script type="application/ld+json">
@@ -21,6 +58,8 @@
 </head>
 <body>
     <header class="header">
+        <button id="add-to-home-btn" style="display: none;">Add to Home Screen</button>
+
         <a href="#home" class="logo">Aditya<span> Bhati</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
