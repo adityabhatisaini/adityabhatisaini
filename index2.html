@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi, this is rishabh</title>
+    <meta name="description" content="Official portfolio of Rishabh Karnawat. Explore my work, projects, and professional experience in software development and technology.">
+    
+    <!-- Keywords meta tag (while not as important for modern SEO, still good to include) -->
+    <meta name="keywords" content="Rishabh Karnawat, Rishabh, Rishabhk, software developer, portfolio">
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Rishabh Karnawat - Portfolio">
+    <meta property="og:description" content="Professional portfolio and work showcase of Rishabh Karnawat">
+    <meta property="og:type" content="website">
+    
+    <!-- Ensure search engines index your page -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Author tag -->
+    <meta name="author" content="Rishabh Karnawat">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="profile picture.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="profile picture.jpeg">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">RK</a>
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">home</a>
+            <a href="essays.html">essays</a>
+            <a href="experience.html">work experience</a>
+            <a href="bookshelf.html">bookshelf</a>
+            <a href="goals.html">goals</a>
+        </div>
+        
+
+    </nav>
+    <div class="main-content">
+        <img src="profile picture.jpeg" alt="Rishabh's Profile" class="profile-image">
+        <h1 class="title">hi, this is <span class="highlight-words">rishabh</span>.</h1>
+        <p class="bio">i am currently a grade 12 student enrolled in the international baccalaureate diploma programme, set to graduate in 2025. i am a student, entrepreneur, and a self-taught full stack developer building and shipping products that sell.</p>
+        <p class="bio">i love to collaborate with like-minded individuals and build products that solve real-world problems. if you are interested in working together, feel free to reach out via <a href="mailto:rishabh.karanawat.2114@gmail.com" class="bio-link">gmail</a> or schedule a <a href="https://cal.com/rishabh-karnawat-vbrvap" class="bio-link">call</a>.</p>
+        <p class="bio">i am very curious about ai, startups, saas, cryptocurency, philosophy, space-tech, green energy and neuroscience. to work with me on the same and know me more, you can connect with me on <a href="https://www.linkedin.com/in/rishabh-karnawat-a1ab28319" class="bio-link">linkedin</a>.</p>
+        <p class="bio">i believe you cannot build great things without being surrounded by great people, thats why i started writing on <a href="https://x.com/Rishabhbuilds" class="bio-link">twitter(x)</a>.</p>
+
+        
+    </div>
+    <div class="footer">
+        <a href="index.html" class="footer-logo">RK</a>
+        <p class="copyright">Copyright © 2024 Rishabh Karnawat. All Rights Reserved.</p>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+    
+        // Hamburger click handler
+        hamburger.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent click from immediately bubbling to document
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            });
+        });
+    
+        // Close menu when clicking anywhere else on the document
+        document.addEventListener("click", (e) => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            }
+        });
+    
+        // Prevent clicks inside the menu from closing it
+        navLinks.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
