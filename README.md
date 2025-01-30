@@ -33,9 +33,14 @@ VS Code (Visual Studio Code) is my go-to tool for coding, debugging, and editing
 ### [Google Play Store Apps Listing Certificate ](https://www.credential.net/113713894)
 Here is my certification and badge for **Google Play Console Management**:
 
+![Alt text](https://github.com/adityabhatisaini/adityabhatisaini/blob/255322bb7729fe928560e6ae37cae176de8ba858/Screenshot%202025-01-31%20020726.png)
+
 ![Certification Badge](https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/113713894)
 
+
 [View Full Certificate](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/113713894)
+
+
 
 ## My Google Play Store Developer Page
 
