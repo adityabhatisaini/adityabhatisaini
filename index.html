@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging.js"></script>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDsRbOjyfeMwQd3hNmslBcw9LccKS6OWQk",
+            authDomain: "aditya-bhati.firebaseapp.com",
+            projectId: "aditya-bhati",
+            storageBucket: "aditya-bhati.appspot.com",
+            messagingSenderId: "13166605751",
+            appId: "1:13166605751:web:ab5b96dbe4abb9cf0c2432"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
+
+        // Request notification permission
+        function requestPermission() {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    console.log("Notification permission granted.");
+                    getToken();
+                } else {
+                    console.log("Notification permission denied.");
+                }
+            });
+        }
+
+        // Get FCM Token
+        function getToken() {
+            messaging.getToken({ vapidKey: "BN6nwElNtDv9MQ38-L4VMDgxCSOHDrEdFsi_rxkf3GCSrxeaDEdvP4PLwraAF8KJ3Dr2fvqTVP2VrkyTL4KU_Fc" })
+                .then(currentToken => {
+                    if (currentToken) {
+                        console.log("FCM Token:", currentToken);
+                        // Send this token to your backend server to send notifications
+                    } else {
+                        console.log("No registration token available. Request permission to generate one.");
+                    }
+                })
+                .catch(err => {
+                    console.error("An error occurred while retrieving token:", err);
+                });
+        }
+
+        // Handle incoming messages
+        messaging.onMessage(payload => {
+            console.log("Message received:", payload);
+            new Notification(payload.notification.title, {
+                body: payload.notification.body,
+                icon: payload.notification.icon
+            });
+        });
+
+        // Request permission when the page loads
+        window.onload = () => {
+            requestPermission();
+        };
+    </script>
 
     <script>
         if ('serviceWorker' in navigator) {
