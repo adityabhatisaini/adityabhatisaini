@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js').then(() => {
+            console.log('Service Worker registered');
+          });
+        }
+    </script>
+
+    <script>
+     let deferredPrompt;
+  
+      window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the default prompt
+      e.preventDefault();
+      deferredPrompt = e;
+  
+      // Show your custom button or prompt here
+      const addToHomeBtn = document.getElementById('add-to-home-btn');
+      addToHomeBtn.style.display = 'block';
+  
+      addToHomeBtn.addEventListener('click', () => {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+     });
+    </script>
+  
+      
+
+    <link rel="manifest" href="/manifest.json">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://adityabhati.online",
+      "logo": "favicon.ico"
+    }
+    </script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Bhati</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging.js"></script>
@@ -63,59 +119,6 @@
         };
     </script>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/service-worker.js').then(() => {
-            console.log('Service Worker registered');
-          });
-        }
-    </script>
-
-    <script>
-     let deferredPrompt;
-  
-      window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the default prompt
-      e.preventDefault();
-      deferredPrompt = e;
-  
-      // Show your custom button or prompt here
-      const addToHomeBtn = document.getElementById('add-to-home-btn');
-      addToHomeBtn.style.display = 'block';
-  
-      addToHomeBtn.addEventListener('click', () => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-          } else {
-            console.log('User dismissed the A2HS prompt');
-          }
-          deferredPrompt = null;
-        });
-      });
-     });
-    </script>
-  
-      
-
-    <link rel="manifest" href="/manifest.json">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://adityabhati.online",
-      "logo": "favicon.ico"
-    }
-    </script>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Bhati</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
