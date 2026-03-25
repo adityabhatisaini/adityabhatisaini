@@ -15,6 +15,13 @@
     --main-color: #00ffee;
 }
 
+.light-theme {
+    --bg-color: #f0f0f0;
+    --second-bg-color: #ffffff;
+    --text-color: #080808;
+    --main-color: #00ffee;
+}
+
 html{
     font-size: 60%;
     overflow-x: hidden;
@@ -23,6 +30,52 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--second-bg-color);
+    border-top: 4px solid var(--main-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader-content h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -66,6 +119,18 @@ body{
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+}
+.theme-toggle {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 2rem;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: white;
 }
 
 section{
@@ -482,6 +547,112 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
+.projects {
+    background: var(--bg-color);
+    padding: 100px 15px;
+}
+
+.projects h2 {
+    margin-bottom: 5rem;
+    color: white;
+    text-align: center;
+    font-size: 8rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-box {
+    background-color: var(--second-bg-color);
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.project-box.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-box:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 246, 255, 0.3);
+}
+
+.project-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.project-info h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-box:hover .project-info h4 {
+    color: black;
+}
+
+.project-info p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.project-box:hover .project-info p {
+    color: black;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+    background: var(--main-color);
+    color: black;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--main-color);
+    color: black;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    background: black;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
 .services {
     background: var(--second-bg-color);
     color: black;
@@ -511,6 +682,13 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.services-box.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .services-box:hover {
@@ -550,12 +728,57 @@ span{
     margin-bottom: 3rem;
     color: white;
 }
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    transition: 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.contact-item h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    color: white;
+    font-size: 1.1rem;
+}
+
 .contact form{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin: 5rem auto;
+    margin: 0;
     text-align: center;
 }
 .contact form.input-box{
@@ -577,6 +800,26 @@ span{
 }
 .contact form .btn{
     margin-top: 2rem;
+}
+
+#form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    display: none;
+}
+
+#form-message.success {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+#form-message.error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid #ff0000;
 }
 
 .footer{
@@ -635,7 +878,40 @@ span{
     text-align: center;
     font-size: 16px;
     color: white;
-}@media(max-width:1285px){
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--main-color);
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+@media(max-width:1285px){
     html{
         font-size: 55%;
     }
@@ -676,6 +952,18 @@ span{
     
     .contact form{
         flex-direction: column;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-item {
+        flex: 1 1 250px;
     }
     .footer{
         padding: 2rem 4%;

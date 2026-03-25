@@ -57,16 +57,26 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <h3>Loading...</h3>
+        </div>
+    </div>
     <header class="header">
         <a href="#home" class="logo">Aditya<span> Bhati</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
+        <div class="theme-toggle">
+            <i class='bx bx-sun' id="theme-icon"></i>
+        </div>
         <nav class="navbar">
             <button id="add-to-home-btn" style="display: none; background: transparent; color: white;">Download App</button>
 
 
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
-            <!--<a href="#experience">Experience</a>-->
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
             <a href="https://infontiq.blogspot.com/">Blogs</a>
@@ -144,8 +154,15 @@
         border-radius: 50px; /* Rounded corners */
         border: 2px solid #00F6FF; /* Solid neon border without blur */
         font-weight: bold;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
         cursor: pointer;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .skills-box.animate {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .skills-box:hover {
@@ -219,79 +236,148 @@
             </div>
         </div>
     </section>
-</body>
-</html>
 
-<section class="experience" id="experience">
-    <h2 class="heading">Experience</h2>
-    <div class="timeline-items">
+    <section class="experience" id="experience">
+        <h2 class="heading">Experience</h2>
+        <div class="timeline-items">
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">April 2025 - Present</div>
-            <div class="timeline-content">
-                <h3>Data Analyst & Automation Intern in
-Adani Group</h3>
-                <p>Developing dashboards, reports, and automation workflows to enhance decision-making efficiency.
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">April 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Data Analyst & Automation Intern at Adani Group</h3>
+                    <p>Developing dashboards, reports, and automation workflows to enhance decision-making efficiency. Collaborating with cross-functional teams to analyze data trends and optimize internal processes. Gaining hands-on experience in tools like Python, SQL, Power BI, and automation frameworks.</p>
+                </div>
+            </div>
 
-Collaborating with cross-functional teams to analyze data trends and optimize internal processes.
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jan 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Intern at AU Small Finance Bank</h3>
+                    <p>As a DevOps & Backend Intern, I worked on backend development using Java (Spring Boot) and automated deployments with GitLab CI/CD and Jenkins. I containerized applications using Docker and deployed them on AWS. Additionally, I managed Linux-based servers, enhancing my expertise in cloud computing, automation, and backend development.</p>
+                    <p><strong>Skills:</strong> Java, Backend, Spring Boot, Hibernate, PostgreSQL, Linux, SQL, Teamwork, DevOps, Docker, Jenkins, GitLab, Git</p>
+                </div>
+            </div>
 
-Gaining hands-on experience in tools like Python, SQL, Power BI, and automation frameworks.</p>
-                <!-- <p><strong>Skills:</strong> Physics, Science</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 2024 - Dec 2024</div>
+                <div class="timeline-content">
+                    <h3>Cybersecurity Intern at 1Stop.ai</h3>
+                    <p>• Conducted vulnerability assessments and risk analysis to identify and mitigate potential threats.<br>• Assisted in implementing and maintaining network security protocols to protect sensitive data.<br>• Monitored security systems and analyzed incidents using SIEM tools.</p>
+                    <p><strong>Skills:</strong> Ethical Hacking</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 2024 - Dec 2024</div>
+                <div class="timeline-content">
+                    <h3>Math AI Trainer at Outlier</h3>
+                    <p>• Reviewed and analyzed mathematical content to train AI models for accuracy and relevance.<br>• Collaborated with project teams to ensure high-quality output.<br>• Adapted quickly to new projects and tasks with varied pay rates based on expertise and complexity.</p>
+                    <p><strong>Skills:</strong> Mathematics, Artificial Intelligence (AI), Chatbot Testing, Chatbot Responses, Chatbot Development</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">July 2024 - August 2024</div>
+                <div class="timeline-content">
+                    <h3>Summer Internship at Netcamp Solutions Private Limited</h3>
+                    <p>Participated in an extensive training program focused on Networking with Ethical Hacking, Network Security, App Development, and Web Development. Acquired essential skills and practical experience under the guidance of industry experts.</p>
+                    <p><strong>Skills:</strong> Networking, Ethical Hacking, Network Security, App Development, Web Development</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Feb 2024 - Mar 2024</div>
+                <div class="timeline-content">
+                    <h3>Data Analyst Traineeship at MedTourEasy</h3>
+                    <p>Embarked on a comprehensive data science traineeship, led by industry leaders, offering immersive learning and career advancement. Gained vital skills and hands-on experience to excel in the ever-evolving realm of data science.</p>
+                    <p><strong>Skills:</strong> Data Analysis, Data Cleaning, Data Visualization</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Feb 2024 - Mar 2024</div>
-            <div class="timeline-content">
-                <h3>Data Analyst Traineeship at MedTourEasy</h3>
-                <p>Embarked on a comprehensive data science traineeship, led by industry leaders, offering immersive learning and career advancement. Gained vital skills and hands-on experience to excel in the ever-evolving realm of data science.</p>
-                <p><strong>Skills:</strong> Data Analysis, Data Cleaning, Data Visualization</p>
+    <section class="projects" id="projects">
+        <h2 class="heading">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Data Analytics Dashboard</h4>
+                    <p>Interactive dashboard built with Power BI for business intelligence and data visualization. Features real-time data updates, custom KPIs, and automated reporting.</p>
+                    <div class="project-tech">
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>Python</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>E-commerce Website</h4>
+                    <p>Full-stack e-commerce platform built with modern web technologies. Includes user authentication, payment integration, and admin dashboard.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Mobile App Development</h4>
+                    <p>Cross-platform mobile application for productivity tracking. Published on Google Play Store with over 1,000 downloads.</p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Google Play</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/dev?id=8574852185894925404" class="project-link">View on Play Store</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>AI Chatbot</h4>
+                    <p>Intelligent chatbot powered by OpenAI API for customer support automation. Features natural language processing and context awareness.</p>
+                    <div class="project-tech">
+                        <span>OpenAI</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                    </div>
+                    <a href="#" class="project-link">View Demo</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Portfolio Website</h4>
+                    <p>Personal portfolio website showcasing skills, projects, and experience. Built with modern HTML5, CSS3, and JavaScript.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#home" class="project-link">You're Here!</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Data Science Research</h4>
+                    <p>Research project on predictive analytics for healthcare data. Includes machine learning models and statistical analysis.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Jupyter</span>
+                    </div>
+                    <a href="https://github.com/adityabhatisaini" class="project-link">View on GitHub</a>
+                </div>
             </div>
         </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">July 2024 - August 2024</div>
-            <div class="timeline-content">
-                <h3>Summer Internship at Netcamp Solutions Private Limited</h3>
-                <p>Participated in an extensive training program focused on Networking with Ethical Hacking, Network Security, App Development, and Web Development. Acquired essential skills and practical experience under the guidance of industry experts.</p>
-                <p><strong>Skills:</strong> Networking, Ethical Hacking, Network Security, App Development, Web Development</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Sep 2024 - Dec 2024</div>
-            <div class="timeline-content">
-                <h3>Math AI Trainer at Outlier</h3>
-                <p>• Reviewed and analyzed mathematical content to train AI models for accuracy and relevance.<br>• Collaborated with project teams to ensure high-quality output.<br>• Adapted quickly to new projects and tasks with varied pay rates based on expertise and complexity.</p>
-                <p><strong>Skills:</strong> Mathematics, Artificial Intelligence (AI), Chatbot Testing, Chatbot Responses, Chatbot Development</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Sep 2024 - Dec 2024</div>
-            <div class="timeline-content">
-                <h3>Cybersecurity Intern at 1Stop.ai</h3>
-                <p>• Conducted vulnerability assessments and risk analysis to identify and mitigate potential threats.<br>• Assisted in implementing and maintaining network security protocols to protect sensitive data.<br>• Monitored security systems and analyzed incidents using SIEM tools.</p>
-                <p><strong>Skills:</strong> Ethical Hacking</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jan 2025 - Present</div>
-            <div class="timeline-content">
-                <h3>Intern at AU Small Finance Bank</h3>
-                <p>As a DevOps & Backend Intern, I worked on backend development using Java (Spring Boot) and automated deployments with GitLab CI/CD and Jenkins. I containerized applications using Docker and deployed them on AWS. Additionally, I managed Linux-based servers, enhancing my expertise in cloud computing, automation, and backend development.</p>
-                <p><strong>Skills:</strong> Java, Backend, Spring Boot, Hibernate, PostgreSQL, Linux, SQL, Teamwork, DevOps, Docker, Jenkins, GitLab, Git</p>
-            </div>
-        </div>
-    </div> -->
-
     </section>
 
     <section class="services" id="services">
@@ -332,23 +418,43 @@ Gaining hands-on experience in tools like Python, SQL, Power BI, and automation 
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="13668d68-5cc9-4495-aff6-fd7b95d0f12f">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class='bx bx-envelope'></i>
+                    <h4>Email</h4>
+                    <p>adityabhati@example.com</p>
                 </div>
-                <div class="input-box">
-                    <input type="tel" name="phone_number" placeholder="Phone Number" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
+                <div class="contact-item">
+                    <i class='bx bx-phone'></i>
+                    <h4>Phone</h4>
+                    <p>+91 XXXXX XXXXX</p>
+                </div>
+                <div class="contact-item">
+                    <i class='bx bx-map'></i>
+                    <h4>Location</h4>
+                    <p>India</p>
                 </div>
             </div>
-            <div class="input-group-2">
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </div>
-        </form>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <input type="hidden" name="access_key" value="13668d68-5cc9-4495-aff6-fd7b95d0f12f">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="phone_number" placeholder="Phone Number" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                </div>
+                <div class="input-group-2">
+                    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send Message" class="btn">
+                </div>
+                <div id="form-message"></div>
+            </form>
+        </div>
     </section>
 
     <footer class="footer">
@@ -363,6 +469,10 @@ Gaining hands-on experience in tools like Python, SQL, Power BI, and automation 
         </ul>
         <p class="copyright">© 2025 Aditya Bhati | All Rights Reserved.</p>
     </footer>
+
+    <div class="scroll-to-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </div>
 
     <script src="script.js"></script>
 </body>
