@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <script>
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/service-worker.js').then(() => {
-            console.log('Service Worker registered');
-          });
+          navigator.serviceWorker.register('/service-worker.js').catch(() => {});
         }
     </script>
 
     <script>
     let deferredPrompt;
-  
     window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the default prompt
       e.preventDefault();
       deferredPrompt = e;
-  
-      // Show your custom button or prompt here
       const addToHomeBtn = document.getElementById('add-to-home-btn');
       addToHomeBtn.style.display = 'block';
-  
       addToHomeBtn.addEventListener('click', () => {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-          } else {
-            console.log('User dismissed the A2HS prompt');
-          }
+        deferredPrompt.userChoice.then(() => {
           deferredPrompt = null;
         });
       });
     });
     </script>
   
-      
-
     <link rel="manifest" href="/manifest.json">
 
     <script type="application/ld+json">
@@ -59,17 +44,17 @@
 <body>
     <header class="header">
         <a href="#home" class="logo">Aditya<span> Bhati</span></a>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">
+            <i class='bx bx-moon'></i>
+        </button>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <button id="add-to-home-btn" style="display: none; background: transparent; color: white;">Download App</button>
-
-
+            <button id="add-to-home-btn" class="app-download-btn">Download App</button>
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
-            <!--<a href="#experience">Experience</a>-->
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
-            <a href="https://infontiq.blogspot.com/">Blogs</a>
+            <a href="https://infontiq.blogspot.com/">Blog</a>
         </nav>
     </header>
 
@@ -103,82 +88,30 @@
     <div class="skills-container">
         <div class="skills-box"><h3>Wix Web Development</h3></div>
         <div class="skills-box"><h3>App Sheet Development</h3></div>
-        <div class="skills-box"><a href="https://play.google.com/store/apps/dev?id=8574852185894925404">Google Play Console Management</a></div>
-        <div class="skills-box"><h3></h3>Microsoft SQL Server</h3></div>
+        <div class="skills-box"><h3>Google Play Console</h3></div>
+        <div class="skills-box"><h3>Microsoft SQL Server</h3></div>
         <div class="skills-box"><h3>Microsoft Office 365</h3></div>
         <div class="skills-box"><h3>Python</h3></div>
         <div class="skills-box"><h3>App Growth Marketing</h3></div>
         <div class="skills-box"><h3>Microsoft Power BI</h3></div>
         <div class="skills-box"><h3>Business Analysis</h3></div>
         <div class="skills-box"><h3>Power Query</h3></div>
-        <div class="skills-box"><h3>Advanced Live Streaming(Multi-Screen)</h3></div>
+        <div class="skills-box"><h3>Live Streaming & Streaming</h3></div>
         <div class="skills-box"><h3>Robotic Process Automation</h3></div>
-        <div class="skills-box"><h3>Online Advertisement</h3></div>
+        <div class="skills-box"><h3>Digital Marketing</h3></div>
         <div class="skills-box"><h3>Google Firebase</h3></div>
-        <div class="skills-box"><h3>Google Ads,AdMob,Adsense</h3></div>
+        <div class="skills-box"><h3>Google Ads & AdMob</h3></div>
         <div class="skills-box"><h3>Cloud Computing</h3></div>
-        <div class="skills-box"><h3>Web Scrapping</h3></div>
-        <div class="skills-box"><h3>GitHub(Enterprise)</h3></div>
-        <div class="skills-box"><h3>Business Intelligence (BI)</h3></div>
-        <div class="skills-box"><h3>VS Code(Git to GitHub)</h3></div>
-        <div class="skills-box"><h3>Wordpress Web Development</h3></div>
-        <div class="skills-box"><h3>Google Business Profile Management</h3></div>
+        <div class="skills-box"><h3>Web Scraping</h3></div>
+        <div class="skills-box"><h3>GitHub Enterprise</h3></div>
+        <div class="skills-box"><h3>Business Intelligence</h3></div>
+        <div class="skills-box"><h3>VS Code & Git</h3></div>
+        <div class="skills-box"><h3>WordPress Development</h3></div>
+        <div class="skills-box"><h3>Business Profile Management</h3></div>
     </div>
 </section>
 
-<style>
-    /* Skills Section Styling */
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
-        gap: 20px;
-        padding: 20px;
-    }
 
-    .skills-box {
-        text-align: center;
-        font-size: 18px;
-        color: #000; /* Text color */
-        background-color: #00F6FF; /* Neon blue background */
-        padding: 15px;
-        border-radius: 50px; /* Rounded corners */
-        border: 2px solid #00F6FF; /* Solid neon border without blur */
-        font-weight: bold;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    }
-
-    .skills-box:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 #00F6FF; /* No blur effect on hover */
-    }
-
-    .skills-box h3 {
-        margin: 0;
-    }
-
-    .heading {
-        font-size: 59px;
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    
-    @media (max-width: 768px) {
-        .skills-container {
-            grid-template-columns: 1fr; /* Stack items vertically */
-            gap: 15px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .skills-box {
-            padding: 12px;
-            font-size: 16px;
-        }
-    }
-</style>
 
 
     
@@ -279,71 +212,65 @@ Gaining hands-on experience in tools like Python, SQL, Power BI, and automation 
                 <p>• Conducted vulnerability assessments and risk analysis to identify and mitigate potential threats.<br>• Assisted in implementing and maintaining network security protocols to protect sensitive data.<br>• Monitored security systems and analyzed incidents using SIEM tools.</p>
                 <p><strong>Skills:</strong> Ethical Hacking</p>
             </div>
-        </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">April 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Data Analyst & Automation Intern - Adani Group</h3>
+                    <p>Developing dashboards, reports, and automation workflows to enhance decision-making efficiency. Collaborating with cross-functional teams to analyze data trends and optimize internal processes. Gaining hands-on experience in Python, SQL, Power BI, and automation frameworks.</p>
+                    <p><strong>Skills:</strong> Python, SQL, Power BI, Data Analysis, Automation</p>
+                </div>
+            </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jan 2025 - Present</div>
-            <div class="timeline-content">
-                <h3>Intern at AU Small Finance Bank</h3>
-                <p>As a DevOps & Backend Intern, I worked on backend development using Java (Spring Boot) and automated deployments with GitLab CI/CD and Jenkins. I containerized applications using Docker and deployed them on AWS. Additionally, I managed Linux-based servers, enhancing my expertise in cloud computing, automation, and backend development.</p>
-                <p><strong>Skills:</strong> Java, Backend, Spring Boot, Hibernate, PostgreSQL, Linux, SQL, Teamwork, DevOps, Docker, Jenkins, GitLab, Git</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Feb 2024 - Mar 2024</div>
+                <div class="timeline-content">
+                    <h3>Data Analyst Traineeship - MedTourEasy</h3>
+                    <p>Comprehensive data science traineeship led by industry leaders. Gained vital skills and hands-on experience in data analysis and science methodologies.</p>
+                    <p><strong>Skills:</strong> Data Analysis, Data Cleaning, Data Visualization</p>
+                </div>
             </div>
-        </div>
-    </div> -->
 
-    </section>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">July 2024 - August 2024</div>
+                <div class="timeline-content">
+                    <h3>Summer Internship - Netcamp Solutions</h3>
+                    <p>Extensive training program focused on Networking, Ethical Hacking, Network Security, App Development, and Web Development under industry expert guidance.</p>
+                    <p><strong>Skills:</strong> Networking, Ethical Hacking, App Development, Web Development</p>
+                </div>
+            </div>
 
-    <section class="services" id="services">
-        <h2 class="heading">I Can Do</h2>
-        <div class="services-container">
-            <div class="services-box">
-                <div class="services-info">
-                    <h4>Data Analysis</h4>
-                    <p>Providing comprehensive data analysis services, including data cleaning, data visualization, and interpretation. We help you make data-driven decisions by uncovering patterns, trends, and insights that are crucial for your business growth.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 2024 - Dec 2024</div>
+                <div class="timeline-content">
+                    <h3>AI Trainer - Outlier</h3>
+                    <p>Reviewed and analyzed mathematical content to train AI models. Collaborated with project teams to ensure high-quality output and adapted quickly to complex projects.</p>
+                    <p><strong>Skills:</strong> Mathematics, AI, Chatbot Development, Content Analysis</p>
                 </div>
             </div>
-            <div class="services-box">
-                <div class="services-info">
-                    <h4>Web Development</h4>
-                    <p>Designing responsive and user-friendly websites with the latest technologies on Wix and WordPress. We create visually stunning, high-performing, and SEO-optimized sites.</p>
-                </div>
-            </div>
-            <div class="services-box">
-                <div class="services-info">
-                    <h4>Apps Hosting</h4>
-                    <p>Specializing in hosting and managing apps on the Google Play Store and Indus App Store, ensuring they are properly published and maintained for maximum visibility.</p>
-                </div>
-            </div>
-            <div class="services-box">
-                <div class="services-info">
-                    <h4>Beta Testing</h4>
-                    <p>I provide beta testing services for mobile apps on the Google Play Store, analyzing performance, usability, and compatibility across devices. Using analytics, key performance indicators (KPIs), and customer feedback, I deliver insights and UI design recommendations to enhance app quality and user experience.</p>
-                </div>
-            </div>
-            <div class="services-box">
-                <div class="services-info">
-                    <h4>Artificial Intelligence</h4>
-                    <p>I develop AI chatbots using OpenAI, focusing on creating intelligent, responsive, and user-friendly conversational experiences. By leveraging advanced NLP models and customer feedback, I optimize chatbot performance, enhance user engagement, and provide insightful recommendations for improved interaction and satisfaction.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="13668d68-5cc9-4495-aff6-fd7b95d0f12f">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-box">
-                    <input type="tel" name="phone_number" placeholder="Phone Number" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 2024 - Dec 2024</div>
+                <div class="timeline-content">
+                    <h3>Cybersecurity Intern - 1Stop.ai</h3>
+                    <p>Conducted vulnerability assessments and risk analysis. Implemented network security protocols and monitored security systems using SIEM tools.</p>
+                    <p><strong>Skills:</strong> Ethical Hacking, Security Analysis, SIEM Tools</p>
                 </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jan 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>DevOps & Backend Intern - AU Small Finance Bank</h3>
+                    <p>Backend development using Java (Spring Boot), automated deployments with GitLab CI/CD and Jenkins, container management with Docker, and AWS deployment. Enhanced expertise in cloud computing and backend development.</p>
+                    <p><strong>Skills:</strong> Java, Spring Boot, Docker, Jenkins, AWS, PostgreSQL, Linux, DevOps</p>
+                </div>
+            </div>
+        </div>            </div>
             <div class="input-group-2">
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
